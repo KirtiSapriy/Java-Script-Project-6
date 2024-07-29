@@ -13,8 +13,23 @@
                 crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
                 #slide {
-                        height: 500px;
-                        width: 700px;
+                        height: 400px;
+                        width: 600px;
+                }
+
+                @media (max-width:400px) {
+                        #slider {
+                                position: relative;
+                        }
+
+                        #slide {
+                                z-index: 0;
+                                width: 100%;
+                        }
+
+                        i {
+                                z-index: 1;
+                        }
                 }
         </style>
 
@@ -25,9 +40,9 @@
 <body>
 
         <div id="main" class="column-1 50 flex items-center justify-center bg-opacity-10" style="height: 585px;">
-                <div id="slider" class="m-6 flex items-center  justify-center ">
+                <div id="slider" class="lg:m-6 flex items-center  justify-center w-full  ms:m-0 ">
                         <button id="perv" class="text-3xl"><i class="fa-solid fa-arrow-left"></i></button>
-                        <div id="slide" class="m-6 h-full w-full">
+                        <div id="slide" class="lg:m-6 ms:m-0  ">
                         </div>
                         <button id="next" class="text-3xl"><i class="fa-solid fa-arrow-right "></i></button>
                 </div>
